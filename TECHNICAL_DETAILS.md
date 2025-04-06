@@ -3,7 +3,7 @@
 Our system implements a concept-based RAG approach that improves upon traditional RAG systems in several key ways:
 
 
-![System Architecture](concept-rag-flow.png)
+![System Architecture](img/concept-rag-flow.png)
 
 ## 1. Concept-Driven Query Expansion
 
@@ -52,7 +52,7 @@ Standard RAG often struggles with long document contexts and contradictory infor
 
 ## 5. Comparative Analysis with Baseline RAG
 
-![Advanced vs Basic Agent](demo.png)
+![Advanced vs Basic Agent](img/demo.png)
 
 
 The repository includes both advanced and basic RAG implementations to demonstrate the advantages:

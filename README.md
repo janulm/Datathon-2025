@@ -3,7 +3,7 @@
 A powerful Retrieval-Augmented Generation (RAG) system developed for the Datathon.ai hackathon 2025 Orderfox challenge. This project implements semantic search across large document datasets to retrieve and synthesize information in response to user queries.
 
 
-![System Architecture](concept-rag-flow.png)
+![System Architecture](img/concept-rag-flow.png)
 
 ## What is RAG?
 
@@ -57,7 +57,7 @@ This approach addresses hallucination issues in LLMs and allows the model to acc
 
 - **Basic Agent** (`rag_basic_agent.py`): Takes a more direct approach with single embedding comparison, retrieving all pages from matching domains for a broader but potentially less focused response.
 
-![Advanced vs Basic Agent](demo.png)
+![Advanced vs Basic Agent](img/demo.png)
 
 ### Business-Driven Concept Customization
 
