@@ -57,6 +57,8 @@ This approach addresses hallucination issues in LLMs and allows the model to acc
 
 - **Basic Agent** (`rag_basic_agent.py`): Takes a more direct approach with single embedding comparison, retrieving all pages from matching domains for a broader but potentially less focused response.
 
+![Advanced vs Basic Agent](demo.png)
+
 ### Business-Driven Concept Customization
 
 A key advantage of our concept-based RAG approach is that organizations can:

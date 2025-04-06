@@ -2,6 +2,9 @@
 
 Our system implements a concept-based RAG approach that improves upon traditional RAG systems in several key ways:
 
+
+![System Architecture](concept-rag-flow.png)
+
 ## 1. Concept-Driven Query Expansion
 
 **Advantages:**
@@ -48,6 +51,9 @@ Traditional RAG often retrieves scattered documents without contextual relations
 Standard RAG often struggles with long document contexts and contradictory information. Our two-stage synthesis breaks down the reasoning process into manageable chunks, allowing deeper analysis of each source before integration, similar to human research processes. The quality of intermediate answers improves dramatically when the concepts guiding retrieval align with the organization's specific information needs.
 
 ## 5. Comparative Analysis with Baseline RAG
+
+![Advanced vs Basic Agent](demo.png)
+
 
 The repository includes both advanced and basic RAG implementations to demonstrate the advantages:
 
