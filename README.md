@@ -2,6 +2,9 @@
 
 A powerful Retrieval-Augmented Generation (RAG) system developed for the Datathon.ai hackathon 2025 Orderfox challenge. This project implements semantic search across large document datasets to retrieve and synthesize information in response to user queries.
 
+
+![System Architecture](concept-rag-flow.png)
+
 ## What is RAG?
 
 Retrieval-Augmented Generation (RAG) is an AI architecture that enhances large language models (LLMs) with the ability to access and use external knowledge. Unlike traditional LLMs that rely solely on their training data, RAG systems:
@@ -27,6 +30,11 @@ This approach addresses hallucination issues in LLMs and allows the model to acc
   
 - **Conversational Follow-ups**: Maintain context for follow-up questions without re-processing data
 
+- **Customizable Concept Framework**: 
+  - Define domain-specific concepts relevant to your business
+  - Tailor the system to focus on concepts that matter to your use case
+  - No need to re-embed documents when changing concept definitions
+
 ## How the System Works
 
 ### Core RAG Process
@@ -48,6 +56,17 @@ This approach addresses hallucination issues in LLMs and allows the model to acc
 - **Advanced Agent** (`rag_agent.py`): Uses prompt expansion to explore multiple conceptual angles of a query, generating intermediate answers from each source before creating a comprehensive final response.
 
 - **Basic Agent** (`rag_basic_agent.py`): Takes a more direct approach with single embedding comparison, retrieving all pages from matching domains for a broader but potentially less focused response.
+
+### Business-Driven Concept Customization
+
+A key advantage of our concept-based RAG approach is that organizations can:
+
+1. **Define Industry-Specific Concepts**: Customize the concept dictionary to focus on dimensions important to your industry
+2. **Maintain Document Scalability**: The document embedding process remains independent of concept definitions, preserving scalability
+3. **Optimize at Inference Time**: Gain the benefits of conceptual search without additional preprocessing costs
+4. **Evolve Without Reprocessing**: Update concept definitions without re-embedding your document collection
+
+This provides the perfect balance between cost-effective document processing and high-precision information retrieval.
 
 For a detailed technical explanation of our concept-based RAG approach and how it improves upon traditional RAG systems, see [TECHNICAL_DETAILS.md](TECHNICAL_DETAILS.md).
 
@@ -81,6 +100,14 @@ Before using the system, you must generate the document embeddings:
 
    Note: The preprocessing can take significant time depending on your dataset size and hardware capabilities.
 
+### Concept Customization
+
+To customize the system for your specific needs:
+
+1. Edit the concept dictionary in `rag_agent.py` to focus on aspects most relevant to your business
+2. No need to reprocess your document embeddings - changes take effect immediately
+3. Test with domain-specific queries to fine-tune your concept definitions
+
 ### Running the UI
 
 Launch the user interface with:
@@ -102,6 +129,7 @@ Key parameters can be adjusted in the agent files:
 - `num_tokens_intermediate_answer`: Limits intermediate processing steps
 - `num_tokens_final_answer`: Sets maximum response length
 - `max_good_subpage_links`: Controls breadth of source retrieval
+- `concept_dict`: Define the business-specific concepts to enhance search relevance
 
 ## Data Structure
 
